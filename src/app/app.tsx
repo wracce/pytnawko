@@ -6,7 +6,7 @@ import "./index.less";
 function App() {
   return (
     <div onContextMenu={(e) => e.preventDefault()}>
-      <Router>
+      <Router basename="/pytnawko">
         <Routes>
           <Route path="" element={<LobbyPage />} />
           <Route path="/game/:size" element={<GamePage />} />
