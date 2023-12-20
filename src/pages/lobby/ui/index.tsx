@@ -5,7 +5,7 @@ export function LobbyPage() {
   return (
     <div className="page page__setup">
       <div className="logo">
-        <img className="logo__image" src="/public/header.png" alt="Пятнашки" />
+        <img className="logo__image" src="./header.png" alt="Пятнашки" />
       </div>
       <div className="game-modes">
         <NavLink
