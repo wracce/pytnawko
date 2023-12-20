@@ -1,6 +1,5 @@
 {
   "name": "tag-game",
-  "base": "/pytnawko",
   "private": true,
   "version": "0.0.0",
   "type": "module",
