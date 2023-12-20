@@ -1,0 +1,51 @@
+@import "/src/shared/config/style.less";
+
+// @LOGO_SIZE: 30%
+
+.page__setup {
+  height: 100%;
+  position: relative;
+}
+
+.logo {
+  box-sizing: border-box;
+  height: 30%;
+  padding: 0 0%;
+  padding-top: 10vh;
+  > .logo__image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.game-modes {
+  box-sizing: border-box;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  > .game-mode {
+    box-shadow: lighten(@SECONDARY__CONTAINER, 0%) 0.1em 0.1em;
+    box-sizing: border-box;
+    font-size: 2em;
+    margin: 0.5em;
+
+    &:hover {
+       box-shadow: lighten(@SECONDARY__CONTAINER, 0%) .2em .2em;
+    }
+  }
+
+  > .order1 {
+    width: 70%;
+  }
+
+  > .order2 {
+    width: 50%;
+  }
+
+  > .order3 {
+    width: 30%;
+  }
+}

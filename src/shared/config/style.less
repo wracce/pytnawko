@@ -1,0 +1,48 @@
+@PRIMARY: #1760a5;
+@PRIMARY__ON: #ffffff;
+@PRIMARY__CONTAINER: #d3e3ff;
+@PRIMARY__ON_CONTAINER: #001c39;
+
+
+@SECONDARY: #bf002a;
+@SECONDARY__ON: #ffffff;
+@SECONDARY__CONTAINER: #ffdad8;
+@SECONDARY__ON_CONTAINER: #410008;
+
+
+// @TERTIARY: #EFB8C8;
+@BACKGROUND: #FFFBFE;
+@BACKGROUND__ON: #1b1b1f;
+
+
+@PAGE_PADDING: 10px;
+.page {
+    box-sizing: border-box;
+    height: 100vh;
+    position: relative;
+    padding: calc(@PAGE_PADDING / 2);
+}
+
+.action {
+    color: @PRIMARY;
+    cursor: pointer;
+    user-select: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+    text-decoration: none;
+    text-align: center;
+}
+
+.action_bordered {
+    border: 3px solid @PRIMARY;
+}
+
+.action_rounded {
+    color: @PRIMARY__ON;
+    background-color: @PRIMARY;
+    border-radius: 0.7em;
+    
+}

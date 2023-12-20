@@ -1,0 +1,112 @@
+@import "/src/shared/config/style.less";
+
+@HEADER_SIZE: 10vh;
+@INFO_SIZE: 10vh;
+@GAME_HEIGHT: calc(100vh - @HEADER_SIZE - @INFO_SIZE - @PAGE_PADDING);
+@GAME_WIDTH: calc(100vw - @PAGE_PADDING);
+
+
+.header {
+  padding: 0 10px;
+  height: @HEADER_SIZE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game {
+  position: relative;
+  height: @GAME_HEIGHT;
+  > .game__content {
+    box-sizing: border-box;
+    position: relative;
+    padding: 20px;
+    height: @GAME_HEIGHT;
+    max-height: @GAME_WIDTH;
+    width: @GAME_WIDTH;
+    max-width: @GAME_HEIGHT;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.info {
+  // padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: @INFO_SIZE;
+}
+
+.stats {
+  position: fixed;
+  top: 15vh;
+  left: 15vw;
+  box-sizing: border-box;
+
+  &__transition {
+    &-enter {
+      opacity: 0;
+    }
+    &-enter-active {
+      opacity: 1;
+      transition: opacity 200ms;
+    }
+    &-exit {
+      opacity: 1;
+    }
+    &-exit-active {
+      opacity: 0;
+      transition: opacity 200ms;
+    }
+  }
+}
+
+.stats > .stats__content {
+  background-color: @BACKGROUND;
+  color: @BACKGROUND__ON;
+  border: 0.2rem solid @PRIMARY;
+  border-radius: 1em;
+  width: 70vw;
+  height: 70vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  > .stats__win-icon {
+    color: @SECONDARY;
+    font-size: 6em;
+  }
+
+  > .stats__win-header {
+    margin-bottom: 0.5em;
+    color: @SECONDARY;
+    font-size: 2em;
+  }
+
+  > .stats__time,
+  > .stats__score {
+    color: @PRIMARY;
+    > b {
+      font-weight: 600;
+    }
+  }
+
+  > .stats__score {
+    font-size: 1.4rem;
+  }
+
+  > .stats__time {
+    margin: 0.5em;
+    font-size: 1.1rem;
+  }
+
+  > .stats__home {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    margin-top: 3.5em;
+    width: 80%;
+    font-size: 1em;
+  }
+}
