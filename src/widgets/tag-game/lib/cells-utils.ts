@@ -1,8 +1,5 @@
 import { Cell } from "../model/cell";
 import { Point } from "../model/point";
-// export function getPosFromIndex(index: number, size: number) {
-//   return { x: index % size, y: Math.floor(index / size) } as Point;
-// }
 
 export function getSizeOfCells(cells: Cell[]) {
   return Math.sqrt(cells.length);

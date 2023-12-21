@@ -1,19 +1,21 @@
+import useSound from "use-sound";
 import { useRef, useState } from "react";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
+
 import { CSSTransition } from "react-transition-group";
-import useSound from "use-sound";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faRotate, faTrophy } from "@fortawesome/free-solid-svg-icons";
+
 import {
   GameBoard,
   GameProvider,
   GameScore,
   GameTime,
 } from "../../../widgets/tag-game";
+import fromSecondsToStringTime from "../../../shared/lib/fromSecondsToStringTime";
 import clickSrc from "../../../../public/click.mp3";
 import "./index.less";
 
-import fromSecondsToStringTime from "../../../shared/lib/fromSecondsToStringTime";
 export function GamePage() {
   const params = useParams();
   const size = Number(params?.size) || 3;

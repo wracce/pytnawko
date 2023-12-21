@@ -1,6 +1,8 @@
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
+
 import { GamePage } from "../pages/game";
 import { LobbyPage } from "../pages/lobby";
+
 import "./index.less";
 
 function App() {

@@ -5,15 +5,10 @@
   padding: 0.6vw;
   position: absolute;
   background-color: rgba(0, 0, 0, 0);
-
-  // text-align: center;
   cursor: pointer;
-
   border: none;
-
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
   -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
-  // outline: none !important;
 
   &-enter-done {
     transition-property: all;
@@ -28,13 +23,12 @@
     display: flex;
     background: @PRIMARY__CONTAINER;
     color: @PRIMARY__ON_CONTAINER;
-    font-size: min(7vw,7vh);
+    font-size: min(7vw, 7vh);
     border-radius: 8px;
     box-shadow: lighten(@SECONDARY__CONTAINER, 0%) 0.6vw 0.6vw;
 
     &:hover {
-    box-shadow: lighten(@SECONDARY__CONTAINER, 0%) 0.9vw 0.9vw;
-
+      box-shadow: lighten(@SECONDARY__CONTAINER, 0%) 0.9vw 0.9vw;
     }
   }
 }

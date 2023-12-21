@@ -1,7 +1,9 @@
-import { CSSTransition } from "react-transition-group";
-import { useCellsDispatch } from "../model/cells-context";
-import "./tile.less";
 import { useRef } from "react";
+import { useCellsDispatch } from "../model/cells-context";
+
+import { CSSTransition } from "react-transition-group";
+
+import "./tile.less";
 
 type Props = {
   id: number;
@@ -39,7 +41,6 @@ export default function Tile({ id, width, height, x, y }: Props) {
           left: x * width,
           width,
           height,
-          // visibility: cell === 3 ? "hidden" : "visible",
         }}
       >
         <div className="cell_content">

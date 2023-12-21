@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-loop-func */
 /* eslint-disable no-param-reassign */
-import getRandomElement from "../../../shared/lib/get-random-element";
+
 import { Cell } from "../model/cell";
 import { getAvailableMoves, getEmptyCell } from "./cells-states";
 import { getCellFromId, getCellFromPos, getIndexFromCell } from "./cells-utils";
+import getRandomElement from "../../../shared/lib/get-random-element";
 
 /**
  *  Generate an ordered array of Cell`s matrix elements
@@ -64,7 +65,7 @@ export function moveCell(cells: Cell[], cellId: number): Cell[] {
   const dy = emptyCell.pos.y - cell.pos.y;
   const dxAbs = Math.abs(dx);
   const dyAbs = Math.abs(dy);
-  // debugger
+
   if (!(dxAbs >= 1 && dyAbs === 0) && !(dyAbs >= 1 && dxAbs === 0))
     return cells;
 
@@ -76,9 +77,6 @@ export function moveCell(cells: Cell[], cellId: number): Cell[] {
     y: cell.pos.y + Math.sign(dy),
   });
 
-  // debugger;
-
-  // console.log(`next cellId ${recursionCell?.id}`);
   if (!recursionCell) return cells;
   return swapCellsPosition(
     moveCell(cells, recursionCell.id),
@@ -90,6 +88,7 @@ export function moveCell(cells: Cell[], cellId: number): Cell[] {
 export function shuffleCells(cells: Cell[], count: number) {
   let newCells = [...cells];
   let prevPos = getEmptyCell(newCells).pos;
+
   while (count > 0) {
     const cell = getRandomElement(
       getAvailableMoves(newCells).filter(
@@ -99,7 +98,7 @@ export function shuffleCells(cells: Cell[], count: number) {
     prevPos = getEmptyCell(newCells).pos;
     newCells = moveCell(newCells, cell.id);
     count -= 1;
-    // debugger;
   }
+
   return newCells;
 }

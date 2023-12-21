@@ -3,7 +3,7 @@ import { faStopwatch } from "@fortawesome/free-solid-svg-icons";
 import { useTime } from "../model/time-context";
 import fromSecondsToStringTime from "../../../shared/lib/fromSecondsToStringTime";
 
-import "./stopwatch.less";
+import "./time.less";
 
 export default function Time() {
   const time = useTime();

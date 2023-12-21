@@ -1,9 +1,12 @@
-import { useEffect, useRef, useState } from "react";
 import { useCells } from "../model/cells-context";
+import { useEffect, useRef, useState } from "react";
+
 import Tile from "./tile";
-import "./board.less";
+
 import { getEmptyCell } from "../lib/cells-states";
 import { getSizeOfCells } from "../lib/cells-utils";
+
+import "./board.less";
 
 export default function Board() {
   const cells = useCells();
@@ -34,12 +37,6 @@ export default function Board() {
       {cells?.map(
         (cell) =>
           getEmptyCell(cells) !== cell && (
-            // <CSSTransition
-            //   classNames="cell"
-            //   timeout={200}
-            //   in={size > 0}
-            //   key={cell.id}
-            // >
             <Tile
               id={cell.id}
               width={cellSize.width}
@@ -48,7 +45,6 @@ export default function Board() {
               y={cell.pos.y}
               key={cell.id}
             />
-            // </CSSTransition>
           ),
       )}
     </div>

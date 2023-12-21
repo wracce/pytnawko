@@ -1,7 +1,5 @@
 @import "/src/shared/config/style.less";
 
-// @LOGO_SIZE: 30%
-
 .page__setup {
   height: 100%;
   position: relative;
@@ -12,6 +10,7 @@
   height: 30%;
   padding: 0 0%;
   padding-top: 10vh;
+  
   > .logo__image {
     height: 100%;
     width: 100%;
@@ -26,14 +25,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   > .game-mode {
-    box-shadow: lighten(@SECONDARY__CONTAINER, 0%) 0.1em 0.1em;
+    box-shadow: @SECONDARY__CONTAINER 0.1em 0.1em;
     box-sizing: border-box;
     font-size: 2em;
     margin: 0.5em;
 
     &:hover {
-       box-shadow: lighten(@SECONDARY__CONTAINER, 0%) .2em .2em;
+      box-shadow: @SECONDARY__CONTAINER 0.2em 0.2em;
     }
   }
 
