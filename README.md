@@ -3,9 +3,7 @@
  Пятнашки — это головоломка, где нужно перемещать плитки по полю 4x4, чтобы упорядочить числа от 1 до 15, оставив одну ячейку пустой для перемещения.
 
 <p align="center">
-    <img width="32%" src="public/prewiew_lobby.png" />
-    <img width="32%" src="public/prewiew_game.png" />
-    <img width="32%" src="public/prewiew_finished.png" />
+    <img height="32%" src="public/example.gif" />
 </p>
 
  ## Попробовать
@@ -16,6 +14,13 @@
 ⚡ Выбор размера поля 
 
 ⚡ Множественное перемещение
+
+ ## Скриншоты
+<p align="center">
+    <img width="32%" src="public/prewiew_lobby.png" />
+    <img width="32%" src="public/prewiew_game.png" />
+    <img width="32%" src="public/prewiew_finished.png" />
+</p>
 
 ## Стек технологий
 
